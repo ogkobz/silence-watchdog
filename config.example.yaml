@@ -1,0 +1,18 @@
+# Ожидаемая частота событий по каждому источнику.
+# max_silence — сколько можно молчать, прежде чем это считается отказом.
+# quiet_hours — окно, когда тишина нормальна (например, ночью звонков нет).
+sources:
+  - name: novofon-webhook
+    max_silence: 72h
+    quiet_hours: null
+  - name: avito-leads
+    max_silence: 6h
+    quiet_hours: "23:00-08:00"
+  - name: nightly-export
+    max_silence: 26h
+    quiet_hours: null
+
+notify:
+  telegram_chat_id: "${TELEGRAM_CHAT_ID}"
+  # Повторный алерт по тому же источнику не чаще, чем раз в это время.
+  repeat_after: 12h
