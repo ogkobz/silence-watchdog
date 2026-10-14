@@ -1,5 +1,7 @@
 # silence-watchdog
 
+[![tests](https://github.com/ogkobz/silence-watchdog/actions/workflows/tests.yml/badge.svg)](https://github.com/ogkobz/silence-watchdog/actions/workflows/tests.yml)
+
 Сторож, который следит не за ошибками, а за молчанием.
 
 ## Зачем
